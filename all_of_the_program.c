@@ -236,24 +236,24 @@ void electrical_bill()
     /*CALCULATE ELECTRICITY BILL AS PER FOLLOWING FORMALA 
 RS 80 FOR FIRST 20 UNNITS 
 RS 8 FOR NEXT 100 UNNITS
-RS 1 PER UNITS FOR ANYTHING MORE
+RS 10 PER UNITS FOR ANYTHING MORE
 */
 int u,p=0;
     printf("\nenter the unit ");
     scanf("%d",&u);
     if(u<=20)
     {
-        p=u*80;
+        p=80;
         printf(" /nrs is%d",p);
     }
      else if(u<=120)
     {
-        p=20*80+(u-20)*100;
+        p=80+(u-20)*8;
         printf(" /nrs is%d",p);
     }
     else{
           {
-        p=20*80+100*8+(u-120)*1;
+        p=80+100*8+(u-120)*10;
         printf(" /nrs is%d",p);
     }
     }
